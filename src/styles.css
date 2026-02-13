@@ -9,9 +9,9 @@
 
 /* style applied when the TS adds .active on the link */
 .navbar-nav .nav-link.active {
-  color: #007bff !important;
+  color: #e94699 !important;
   font-weight: bold;
-  border-bottom: 2px solid #007bff;
+  border-bottom: 2px solid #f744a0;
 }
 
 /* normal state */
