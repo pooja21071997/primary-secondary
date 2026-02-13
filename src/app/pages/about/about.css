@@ -1,0 +1,600 @@
+/* =========================
+   SECTION BACKGROUND
+========================= */
+.about-section {
+  background: linear-gradient(135deg, #f8fbff, #ffffff);
+  position: relative;
+  overflow: hidden;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+/* Decorative soft shapes */
+.about-section::before {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: rgba(220, 53, 69, 0.05);
+  border-radius: 50%;
+  top: -120px;
+  left: -120px;
+}
+
+.about-section::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgba(13, 110, 253, 0.06);
+  border-radius: 50%;
+  bottom: -120px;
+  right: -120px;
+}
+
+.about-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================
+   IMAGE STYLE
+========================= */
+.about-section img {
+  border-radius: 20px;
+  transition: all 0.5s ease;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Elegant hover zoom */
+.about-section img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.15);
+}
+
+/* Optional floating animation */
+@keyframes floatImage {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.about-section img {
+  animation: floatImage 6s ease-in-out infinite;
+}
+
+/* =========================
+   HEADING STYLE
+========================= */
+.line {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #e94699, #1299b4);
+  border-radius: 5px;
+  transition: 0.4s;
+}
+
+.section-title:hover + .line {
+  width: 140px;
+}
+.text-blue{
+    color: #15025c;
+}
+/* =========================
+   TEXT ANIMATION
+========================= */
+.about-section p {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+}
+
+.about-section p:nth-of-type(1) { animation-delay: 0.3s; }
+.about-section p:nth-of-type(2) { animation-delay: 0.6s; }
+.about-section p:nth-of-type(3) { animation-delay: 0.9s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   SOFT HIGHLIGHT BOX EFFECT
+========================= */
+.about-section .col-lg-8 {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+}
+/* ==============================
+   SECTION BACKGROUND
+================================ */
+.founder-section {
+  background: linear-gradient(135deg, #fffaf3, #f5e1e1);
+  position: relative;
+  overflow: hidden;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+.founder-section .fs-3 {
+  background: linear-gradient(
+    90deg,
+    #e94699,
+    #1299b4,
+    #e94699
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 4s linear infinite;
+}
+
+@keyframes gradientMove {
+  to {
+    background-position: 200% center;
+  }
+}
+.founder-section p {
+  background: linear-gradient(135deg, #e94699, #1299b4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Soft decorative shapes */
+.founder-section::before {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: rgba(255, 193, 7, 0.08);
+  border-radius: 50%;
+  top: -120px;
+  right: -120px;
+}
+
+.founder-section::after {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background: rgba(13, 110, 253, 0.05);
+  border-radius: 50%;
+  bottom: -100px;
+  left: -100px;
+}
+
+.founder-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* ==============================
+   QUOTE CARD STYLE
+================================ */
+.founder-section .ps-md-4 {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+  transition: all 0.4s ease;
+}
+
+.founder-section .ps-md-4:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.12);
+}
+
+/* ==============================
+   QUOTE ICON ANIMATION
+================================ */
+.founder-section i {
+  font-size: 45px;
+  background: linear-gradient(135deg, #e94699, #1299b4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: pulseQuote 2.5s infinite ease-in-out;
+}
+
+@keyframes pulseQuote {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+/* ==============================
+   QUOTE TEXT STYLE
+================================ */
+.founder-section .fs-3 {
+  font-size: 28px;
+  font-weight: 500;
+  position: relative;
+}
+
+/* Founder name highlight */
+.founder-section .fw-semibold {
+  letter-spacing: 1px;
+}
+
+/* ==============================
+   IMAGE STYLE
+================================ */
+.founder-section img {
+  border-radius: 25px;
+  transition: all 0.5s ease;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+}
+
+.founder-section img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+}
+
+/* ==============================
+   FADE IN ANIMATION
+================================ */
+.founder-section .row {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUpFounder 1s ease forwards;
+}
+
+@keyframes fadeUpFounder {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ==============================
+   SECTION BACKGROUND
+================================ */
+.subsection-section {
+  background: linear-gradient(135deg, #f8fbff, #ffffff);
+  position: relative;
+  overflow: hidden;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* Decorative background shapes */
+.subsection-section::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 193, 7, 0.08);
+  border-radius: 50%;
+  top: -100px;
+  right: -100px;
+}
+
+.subsection-section::after {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: rgba(220, 53, 69, 0.05);
+  border-radius: 50%;
+  bottom: -100px;
+  left: -100px;
+}
+
+.subsection-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* ==============================
+   CARD STYLE
+================================ */
+.subsection-section .col-lg-4 > div {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+}
+
+.subsection-section .col-lg-4 > div:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+/* ==============================
+   ICON STYLE (Premium Circle)
+================================ */
+.subsection-section i {
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e94699, #1299b4);
+  color: #ffffff !important;
+  font-size: 32px;
+  display: inline-block;
+  margin-bottom: 20px;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 25px rgba(255, 0, 221, 0.35);
+}
+
+/* Icon hover animation */
+.subsection-section .col-lg-4 > div:hover i {
+  transform: scale(1.15) rotate(8deg);
+  box-shadow: 0 15px 35px rgba(204, 0, 255, 0.5);
+}
+
+/* ==============================
+   TITLE STYLE
+================================ */
+.subsection-section h2 {
+  position: relative;
+  display: inline-block;
+}
+
+.subsection-section h2:hover + .line {
+   width: 140px;
+}
+
+/* ==============================
+   ENTRANCE ANIMATION
+================================ */
+.subsection-section .col-lg-4 {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUpSub 0.8s ease forwards;
+}
+
+.subsection-section .col-lg-4:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.subsection-section .col-lg-4:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.subsection-section .col-lg-4:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeUpSub {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ===============================
+   SECTION BACKGROUND
+================================ */
+.principal-section {
+  background: linear-gradient(135deg, #fff9fe, #f5ebf4);
+  position: relative;
+  overflow: hidden;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+/* Decorative academic shapes */
+.principal-section::before {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: rgba(13, 110, 253, 0.05);
+  border-radius: 50%;
+  top: -120px;
+  right: -120px;
+}
+
+.principal-section::after {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background: rgba(220, 53, 69, 0.06);
+  border-radius: 50%;
+  bottom: -100px;
+  left: -100px;
+}
+
+.principal-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* ===============================
+   IMAGE STYLE
+================================ */
+.principal-section img {
+  border-radius: 25px;
+  transition: all 0.5s ease;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.principal-section img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 30px 65px rgba(0, 0, 0, 0.18);
+}
+
+/* ===============================
+   MESSAGE CARD STYLE
+================================ */
+.principal-section .fw-semibold {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 35px;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+  transition: all 0.4s ease;
+}
+
+.principal-section .fw-semibold:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.12);
+}
+
+/* ===============================
+   HEADING STYLE
+================================ */
+.principal-section h2 {
+  position: relative;
+  display: inline-block;
+}
+
+.principal-section h2:hover + .line {
+  width: 140px;
+}
+
+/* ===============================
+   LEFT BORDER ACCENT (Prestige Look)
+================================ */
+.principal-section .fw-semibold p {
+  position: relative;
+  padding-left: 25px;
+  line-height: 1.8;
+  color: #555;
+}
+
+.principal-section .fw-semibold p::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(135deg, #e94699, #1299b4);
+  border-radius: 4px;
+}
+.principal-section .fw-semibold p::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    #e94699,
+    #1299b4,
+    #e94699
+  );
+  background-size: 200% 200%;
+  animation: gradientBorderMove 4s linear infinite;
+  border-radius: 4px;
+}
+
+@keyframes gradientBorderMove {
+  to {
+    background-position: 0% 200%;
+  }
+}
+
+
+/* ===============================
+   FADE-IN ANIMATION
+================================ */
+.principal-section .row {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUpPrincipal 1s ease forwards;
+}
+
+@keyframes fadeUpPrincipal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Section Background */
+.info-section {
+  background: linear-gradient(135deg, #f8fbff, #eef4ff);
+}
+
+/* Card Design */
+.section-card {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+  transition: 0.4s ease;
+}
+
+.section-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+/* Title */
+.section-title h3 {
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, #e94699, #1299b4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-title i {
+  font-size: 22px;
+  background: linear-gradient(135deg, #e94699, #1299b4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Animated underline */
+.title-line {
+  display: block;
+  width: 70px;
+  height: 4px;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #e94699, #1299b4);
+  margin-top: 8px;
+  animation: lineExpand 2s ease infinite alternate;
+}
+
+@keyframes lineExpand {
+  from { width: 70px; }
+  to { width: 120px; }
+}
+
+/* Custom Table */
+.custom-table {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Header */
+.custom-table thead {
+  background: linear-gradient(135deg, #e94699, #1299b4);
+  color: #fff;
+}
+
+.custom-table thead th {
+  border: none;
+  font-weight: 600;
+  padding: 15px;
+}
+
+/* Body */
+.custom-table tbody td {
+  padding: 15px;
+  font-weight: 500;
+  color: #444;
+}
+
+/* Row Hover Effect */
+.custom-table tbody tr {
+  transition: 0.3s ease;
+}
+
+.custom-table tbody tr:hover {
+  background-color: #f3f9ff;
+  transform: scale(1.01);
+}
+
+/* Remove heavy borders */
+.custom-table,
+.custom-table td,
+.custom-table th {
+  border: none !important;
+}

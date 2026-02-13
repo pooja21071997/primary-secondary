@@ -1,0 +1,155 @@
+/* ===============================
+   Multipurpose Hall Premium Design
+================================= */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f8ff;
+}
+
+/* Section Background */
+.hall-section {
+  background: linear-gradient(135deg, #f8fbff, #eef4ff);
+}
+
+/* Card */
+.hall-card {
+  background: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.06);
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s ease;
+}
+
+.hall-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 35px 90px rgba(0, 0, 0, 0.08);
+}
+
+/* Decorative Gradient Glow */
+.hall-card::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(135deg, #e94699, #1299b4);
+  opacity: 0.07;
+  border-radius: 50%;
+}
+
+/* Title */
+.section-title h2 {
+  font-weight: 700;
+  font-size: 30px;
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, #e94699, #1299b4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Icon Animation */
+.section-title i {
+  margin-left: 12px;
+  font-size: 24px;
+  animation: floatIcon 3s ease-in-out infinite;
+}
+
+@keyframes floatIcon {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+/* Underline */
+.title-line {
+  display: block;
+  width: 80px;
+  height: 4px;
+  border-radius: 5px;
+  margin-top: 10px;
+  background: linear-gradient(135deg, #e94699, #1299b4);
+  transition: 0.4s ease;
+}
+
+.hall-card:hover .title-line {
+  width: 140px;
+}
+
+/* Intro */
+.intro-text {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Feature List */
+.feature-list {
+  margin-top: 15px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 18px;
+  transition: 0.3s ease;
+}
+
+.feature-item span {
+  min-width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e94699, #1299b4);
+  color: #fff;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  font-size: 14px;
+  box-shadow: 0 6px 15px rgba(233, 70, 153, 0.3);
+}
+
+.feature-item p {
+  margin: 0;
+  color: #555;
+  line-height: 1.7;
+  font-size: 15.5px;
+}
+
+.feature-item:hover {
+  transform: translateX(6px);
+}
+
+/* Image Styling */
+.image-wrapper {
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+.image-wrapper img {
+  transition: 0.6s ease;
+  border-radius: 20px;
+}
+
+.hall-card:hover img {
+  transform: scale(1.07);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title h2 {
+    font-size: 24px;
+  }
+
+  .feature-item span {
+    min-width: 36px;
+    height: 36px;
+    font-size: 12px;
+  }
+}
